@@ -1,6 +1,83 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Open_Sans,
+  Poppins,
+  Cinzel,
+} from "next/font/google";
+import localfont from "next/font/local";
 import "./globals.css";
+
+const dream = localfont({
+  src: [
+    {
+      path: "../../public/fonts/DreamAvenueRegular.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-dream",
+});
+
+const tanMonCheri = localfont({
+  src: [
+    {
+      path: "../../public/fonts/tan-mon-cheri.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-tan-mon-cheri",
+});
+
+const drugs = localfont({
+  src: [
+    {
+      path: "../../public/fonts/TTDrugsTrialRegular.otf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-drugs",
+});
+
+const lazord = localfont({
+  src: [
+    {
+      path: "../../public/fonts/LazordSerif.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-lazord",
+});
+
+const openSauce = localfont({
+  src: [
+    {
+      path: "../../public/fonts/OpenSauceTwoMedium.ttf",
+      weight: "500",
+    },
+  ],
+  variable: "--font-opensauce",
+});
+
+const helvetica = localfont({
+  src: [
+    {
+      path: "../../public/fonts/helvetica-world-regular.ttf",
+      weight: "500",
+    },
+  ],
+  variable: "--font-helvetica",
+});
+
+const perandory = localfont({
+  src: [
+    {
+      path: "../../public/fonts/PerandorySemiCondensed.otf",
+      weight: "500",
+    },
+  ],
+  variable: "--font-perandory",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +87,23 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["700", "100", "200", "300", "400", "600"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +119,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dream.variable} ${openSans.variable} ${tanMonCheri.variable} ${drugs.variable} ${poppins.variable} ${lazord.variable} ${cinzel.variable} ${openSauce.variable} ${helvetica.variable} ${perandory.variable} antialiased`}
       >
         {children}
       </body>
