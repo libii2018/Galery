@@ -1,4 +1,5 @@
 import React from "react";
+import { CoverImage, FontPolice } from "../types";
 
 interface Props {
   cover: CoverImage;
@@ -6,6 +7,7 @@ interface Props {
   eventDate: string;
   eventCreator: string;
   eventBackgroundColor: string;
+  fonts: FontPolice;
 }
 
 export default function Cover({
@@ -14,6 +16,7 @@ export default function Cover({
   eventDate,
   eventCreator,
   eventBackgroundColor,
+  fonts,
 }: Props) {
   return (
     <section
@@ -43,7 +46,7 @@ export default function Cover({
             <div
               className="absolute inset-4 border-[1px] rounded-tl-[300px] rounded-tr-[300px] border-[#ff9551]"
               style={{
-                backgroundImage: `url(${cover})`,
+                backgroundImage: `url(${cover.url})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -51,12 +54,18 @@ export default function Cover({
           </div>
         </div>
         <div className="flex flex-col w-full md:w-[40%] lg:w-[40%] gap-16">
-          <h1 className="text-[#ff9551] font-dream text-[70px] lg:text-[80px] lg:leading-[120px] w-[70%] md:w-full uppercase">
+          <h1
+            className={`text-[#ff9551] font-${fonts.font1} text-[70px] lg:text-[80px] lg:leading-[120px] w-[70%] md:w-full uppercase`}
+          >
             {eventName}
           </h1>
           <div className="flex flex-row items-center justify-between">
-            <p className="text-xs font-open-sans text-white">{eventCreator}</p>
-            <p className="text-xs font-open-sans text-white">{eventDate}</p>
+            <p className={`text-xs font-${fonts.font2} text-white`}>
+              {eventCreator}
+            </p>
+            <p className={`text-xs font-${fonts.font2} text-white`}>
+              {eventDate}
+            </p>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { CoverImage, FontPolice } from "../types";
 
 interface Props {
   cover: CoverImage;
@@ -6,6 +7,7 @@ interface Props {
   eventDate: string;
   eventCreator: string;
   eventBackgroundColor: string;
+  fonts: FontPolice;
 }
 
 export default function Cover({
@@ -14,16 +16,19 @@ export default function Cover({
   eventDate,
   eventCreator,
   eventBackgroundColor,
+  fonts,
 }: Props) {
   return (
     <section
       className={`flex flex-col-reverse md:flex-row lg:flex-row items-center justify-between h-[100vh] bg-[${eventBackgroundColor}]`}
     >
       <div className="flex flex-col items-start py-20 px-10 justify-between w-full md:w-[40%] h-full">
-        <h2 className="text-[#6b6361] font-opensauce uppercase text-xl">
+        <h2 className={`text-[#6b6361] font-${fonts.font2} uppercase text-xl`}>
           {eventCreator}
         </h2>
-        <h1 className="text-[#6b6361] font-helvetica uppercase text-[100px] md:text-[120px] lg:text-[150px] w-full text-left md:w-[60%] leading-[80px] md:leading-[100px] lg:leading-[140px] md:text-center">
+        <h1
+          className={`text-[#6b6361] font-${fonts.font1} uppercase text-[100px] md:text-[120px] lg:text-[150px] w-full text-left md:w-[60%] leading-[80px] md:leading-[100px] lg:leading-[140px] md:text-center`}
+        >
           {eventName}
         </h1>
         <div className="w-full flex flex-row items-center justify-start gap-2">
@@ -33,7 +38,9 @@ export default function Cover({
               clipPath: "polygon(30% 20%, 70% 50%, 30% 80%)", // Triangle shape
             }}
           ></div>
-          <p className=" text-[#6b6361] uppercase font-opensauce text-lg lg:right-[40px] ">
+          <p
+            className={`text-[#6b6361] uppercase font-${fonts.font2} text-lg lg:right-[40px]`}
+          >
             {eventDate}
           </p>
         </div>
@@ -42,7 +49,7 @@ export default function Cover({
         <div
           className="w-full h-full"
           style={{
-            backgroundImage: `url(${cover})`,
+            backgroundImage: `url(${cover.url})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

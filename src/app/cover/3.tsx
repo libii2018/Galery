@@ -1,4 +1,5 @@
 import React from "react";
+import { CoverImage, FontPolice } from "../types";
 
 interface Props {
   cover: CoverImage;
@@ -6,6 +7,7 @@ interface Props {
   eventDate: string;
   eventCreator: string;
   eventBackgroundColor: string;
+  fonts: FontPolice;
 }
 
 export default function Cover({
@@ -14,21 +16,28 @@ export default function Cover({
   eventDate,
   eventCreator,
   eventBackgroundColor,
+  fonts,
 }: Props) {
   return (
     <section
       className="flex flex-col p-10 items-center justify-between h-[100vh]"
       style={{
-        backgroundImage: `url(${cover})`,
+        backgroundImage: `url(${cover.url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <h2 className="text-white font-drugs text-3xl">{eventCreator}</h2>
-      <h1 className="text-white uppercase font-tan-mon-cheri text-[100px] md:text-[170px] w-[60%] leading-[80px] md:leading-[100px] lg:leading-[140px] text-center">
+      <h2 className={`text-white font-${fonts.font2} text-3xl`}>
+        {eventCreator}
+      </h2>
+      <h1
+        className={`text-white uppercase font-${fonts.font1} text-[100px] md:text-[170px] w-[60%] leading-[100px] md:leading-[140px] lg:leading-[180px] text-center`}
+      >
         {eventName}
       </h1>
-      <p className="text-white font-drugs text-3xl">{eventDate}</p>
+      <p className={`text-white font-font-${fonts.font2} text-3xl`}>
+        {eventDate}
+      </p>
     </section>
   );
 }
