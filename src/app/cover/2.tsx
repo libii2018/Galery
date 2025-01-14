@@ -55,17 +55,15 @@ export default function Cover({
         </div>
         <div className="flex flex-col w-full md:w-[40%] lg:w-[40%] gap-16">
           <h1
-            className={`text-[#ff9551] font-${fonts.font1} text-[70px] lg:text-[80px] lg:leading-[120px] w-[70%] md:w-full uppercase`}
+            className={`text-[#ff9551] font-dream text-[70px] lg:text-[80px] lg:leading-[120px] w-[70%] md:w-full uppercase`}
           >
             {eventName}
           </h1>
           <div className="flex flex-row items-center justify-between">
-            <p className={`text-xs font-${fonts.font2} text-white`}>
+            <p className={`text-xs font-open-sans text-white`}>
               {eventCreator}
             </p>
-            <p className={`text-xs font-${fonts.font2} text-white`}>
-              {eventDate}
-            </p>
+            <p className={`text-xs font-open-sans text-white`}>{eventDate}</p>
           </div>
         </div>
       </div>

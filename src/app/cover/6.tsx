@@ -24,12 +24,12 @@ export default function Cover({
     >
       <div className="flex flex-col items-start py-20 px-10 justify-between w-full md:w-[40%] h-full">
         <h2
-          className={`text-[#6b6361] font-${fonts.font2} uppercase text-lg md:text-xl`}
+          className={`text-[#6b6361] font-opensauce uppercase text-lg md:text-xl`}
         >
           {eventCreator}
         </h2>
         <h1
-          className={`text-[#6b6361] font-${fonts.font1} uppercase text-[50px] md:text-[70px] lg:text-[90px] w-full text-left md:text-left  leading-[80px] md:leading-[100px] lg:leading-[140px]`}
+          className={`text-[#6b6361] font-helvetica uppercase text-[50px] md:text-[70px] lg:text-[90px] w-full text-left md:text-left  leading-[80px] md:leading-[100px] lg:leading-[140px]`}
         >
           {eventName}
         </h1>
@@ -41,7 +41,7 @@ export default function Cover({
             }}
           ></div>
           <p
-            className={`text-[#6b6361] uppercase font-${fonts.font2} text-base md:text-lg lg:right-[40px]`}
+            className={`text-[#6b6361] uppercase font-opensauce text-base md:text-lg lg:right-[40px]`}
           >
             {eventDate}
           </p>

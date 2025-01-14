@@ -30,18 +30,18 @@ export default function Cover({
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center w-full h-full gap-8">
           <h2
-            className={`text-white text-2xl font-semibold font-${fonts.font2} uppercase`}
+            className={`text-white text-2xl font-semibold font-poppins uppercase`}
           >
             {eventCreator}
           </h2>
           <h1
-            className={`text-white text-[80px] font-${fonts.font1} uppercase md:text-[100px] lg:text-[120px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
+            className={`text-white text-[80px] font-lazord uppercase md:text-[100px] lg:text-[120px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
           >
             {eventName}
           </h1>
 
           <p
-            className={`text-white text-2xl font-${fonts.font2} uppercase lg:right-[40px] font-semibold`}
+            className={`text-white text-2xl font-poppins uppercase lg:right-[40px] font-semibold`}
           >
             {eventDate}
           </p>
