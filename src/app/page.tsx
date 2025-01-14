@@ -13,181 +13,183 @@ import { CoverPosition, CoverStyle } from "./types";
 
 export default function Home() {
   return (
-    <Cover1
-      cover={{
-        name: "Sample Image",
-        url: "/images/photo3.jpg",
-        style: CoverStyle.CENTER,
-        position: CoverPosition.CENTER,
-      }}
-      eventName="Gallery name"
-      eventDate="20/01/2022"
-      eventCreator="Photographer name"
-      eventBackgroundColor="#383020"
-      fonts={{
-        font1: "dream",
-        font2: "open-sans",
-      }}
-    />
-    // <Cover2
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="By Alain Ntep"
-    //   eventBackgroundColor="#253439"
-    //   fonts={{
-    //     font1: "dream",
-    //     font2: "open-sans",
-    //   }}
-    // />
-    // <Cover3
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#253439"
-    //   fonts={{
-    //     font1: "tan-mon-cheri",
-    //     font2: "drugs",
-    //   }}
-    // />
-    // <Cover4
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#253439"
-    //   fonts={{
-    //     font1: "lazord",
-    //     font2: "poppins",
-    //   }}
-    // />
-    // <Cover5
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#253439"
-    //   fonts={{
-    //     font1: "cinzel",
-    //     font2: "poppins",
-    //   }}
-    // />
-    // <Cover6
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#eeeae5"
-    //   fonts={{
-    //     font1: "helvetica",
-    //     font2: "opensauce",
-    //   }}
-    // />
-    // <Cover7
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#eeeae5"
-    //   fonts={{
-    //     font1: "perandory",
-    //     font2: "helvetica",
-    //   }}
-    // />
-    // <Cover8
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#ff9551"
-    //   fonts={{
-    //     font1: "perandory",
-    //     font2: "helvetica",
-    //   }}
-    // />
-    // <Cover9
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#ff9551"
-    //   fonts={{
-    //     font1: "lazord",
-    //     font2: "poppins",
-    //   }}
-    // />
-    // <Cover10
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="Photographer name"
-    //   eventBackgroundColor="#383020"
-    //   fonts={{
-    //     font1: "dream",
-    //     font2: "open-sans",
-    //   }}
-    // />
-    // <Cover11
-    //   cover={{
-    //     name: "Sample Image",
-    //     url: "/images/photo3.jpg",
-    //     style: CoverStyle.CENTER,
-    //     position: CoverPosition.CENTER,
-    //   }}
-    //   eventName="Gallery name"
-    //   eventDate="20/01/2025"
-    //   eventCreator="photographer"
-    //   eventBackgroundColor="#383020"
-    //   fonts={{
-    //     font1: "poppins",
-    //     font2: "poppins",
-    //   }}
-    // />
+    <>
+      {/* <Cover1
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2022"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#383020"
+        fonts={{
+          font1: "dream",
+          font2: "open-sans",
+        }}
+      />*/}
+      <Cover2
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="By Alain Ntep"
+        eventBackgroundColor="#253439"
+        fonts={{
+          font1: "dream",
+          font2: "open-sans",
+        }}
+      />
+      <Cover3
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#253439"
+        fonts={{
+          font1: "tan-mon-cheri",
+          font2: "drugs",
+        }}
+      />
+      <Cover4
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#253439"
+        fonts={{
+          font1: "lazord",
+          font2: "poppins",
+        }}
+      />
+      <Cover5
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#253439"
+        fonts={{
+          font1: "cinzel",
+          font2: "poppins",
+        }}
+      />
+      <Cover6
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#eeeae5"
+        fonts={{
+          font1: "helvetica",
+          font2: "opensauce",
+        }}
+      />
+      <Cover7
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#eeeae5"
+        fonts={{
+          font1: "perandory",
+          font2: "helvetica",
+        }}
+      />
+      <Cover8
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#ff9551"
+        fonts={{
+          font1: "perandory",
+          font2: "helvetica",
+        }}
+      />
+      <Cover9
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#ff9551"
+        fonts={{
+          font1: "lazord",
+          font2: "poppins",
+        }}
+      />
+      <Cover10
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="Photographer name"
+        eventBackgroundColor="#383020"
+        fonts={{
+          font1: "dream",
+          font2: "open-sans",
+        }}
+      />
+      <Cover11
+        cover={{
+          name: "Sample Image",
+          url: "/images/photo3.jpg",
+          style: CoverStyle.CENTER,
+          position: CoverPosition.CENTER,
+        }}
+        eventName="Gallery name"
+        eventDate="20/01/2025"
+        eventCreator="photographer"
+        eventBackgroundColor="#383020"
+        fonts={{
+          font1: "poppins",
+          font2: "poppins",
+        }}
+      />
+    </>
   );
 }

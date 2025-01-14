@@ -38,7 +38,7 @@ export default function Cover({
         {eventCreator}
       </h2>
       <h1
-        className={`text-white uppercase font-${fonts.font1} absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-[100px] md:text-[170px] w-[50%] leading-[80px] md:leading-[100px] lg:leading-[140px] text-center`}
+        className={`text-white uppercase font-${fonts.font1} absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
       >
         {eventName}
       </h1>

@@ -23,7 +23,7 @@ export default function Cover({
       className={`flex flex-col relative justify-between h-[100vh] p-8 bg-[${eventBackgroundColor}]`}
     >
       <h1
-        className={`absolute font-${fonts.font1} uppercase text-[60px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
+        className={`absolute font-${fonts.font1} uppercase text-[50px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
       >
         {eventName}
       </h1>

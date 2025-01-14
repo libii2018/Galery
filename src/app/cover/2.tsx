@@ -20,12 +20,12 @@ export default function Cover({
 }: Props) {
   return (
     <section
-      className={`flex flex-col items-center justify-between md:h-[100vh] lg:h-[100vh] p-8 bg-[${eventBackgroundColor}] gap-20`}
+      className={`flex flex-col items-center justify-between md:h-[100vh] lg:h-[100vh] p-8 bg-[${eventBackgroundColor}] gap-20 overflow-hidden`}
     >
       <div className="flex flex-col gap-12 md:gap-0 md:flex-row lg:flex-row items-center justify-between relative w-full max-w-[1200px]">
         <div className="flex flex-col w-full justify-center items-center md:items-start lg:items-start md:w-[50%] lg:w-[50%]">
           <div className="w-[400px] h-[550px] lg:w-[500px] lg:h-[650px] relative flex flex-col z-40  rounded-tl-[300px] rounded-tr-[300px] border-[1px] border-[#ff9551]">
-            <div className="absolute -left-[5.2%] lg:-left-[5.2%] gap-[1px] top-[80%] lg:top-[80%] size-[40px] lg:size-[50px] bg-transparent">
+            <div className="absolute -left-[5.1%] lg:-left-[5.2%] gap-[1px] top-[80%] lg:top-[80%] size-[40px] lg:size-[50px] bg-transparent">
               <div className="size-full relative">
                 <div className="bg-[#ff9551] top-1/2 left-1/2 w-1/2 h-1/2 absolute -translate-x-1/2 -translate-y-1/2"></div>
                 <div className="bg-[#253439] w-1/2 h-1/2 top-[-0.5px] left-[-0.5px] absolute rounded-[100%]"></div>

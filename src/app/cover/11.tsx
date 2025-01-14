@@ -30,12 +30,12 @@ export default function Cover({
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center w-full h-full gap-2">
           <h1
-            className={`text-white uppercase font-${fonts.font1} font-semibold text-[80px] md:text-[110px] lg:text-[135px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
+            className={`text-white uppercase font-${fonts.font1} font-semibold text-[60px] md:text-[110px] lg:text-[135px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
           >
             {eventName}
           </h1>
           <h2
-            className={`text-white uppercase font-${fonts.font2} font-medium text-5xl`}
+            className={`text-white uppercase font-${fonts.font2} font-medium md:text-5xl`}
           >
             {eventCreator}
           </h2>
