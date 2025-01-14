@@ -14,7 +14,7 @@ import { CoverPosition, CoverStyle } from "./types";
 export default function Home() {
   return (
     <>
-      {/* <Cover1
+      <Cover1
         cover={{
           name: "Sample Image",
           url: "/images/photo3.jpg",
@@ -29,7 +29,7 @@ export default function Home() {
           font1: "dream",
           font2: "open-sans",
         }}
-      />*/}
+      />
       <Cover2
         cover={{
           name: "Sample Image",
