@@ -33,17 +33,20 @@ export default function Cover({
       <div className="absolute left-[46px] gap-[1px] top-[46px]  size-[10px] bg-white transform rotate-45"></div>
       <div className="absolute right-[46px] gap-[1px] top-[46px]  size-[10px] bg-white transform rotate-45"></div>
       <h2
-        className={`text-white font-poppins font-semibold text-lg md:text-xl lg:text-2xl absolute top-[35px] left-1/2 -translate-x-1/2`}
+        className={`text-white font-semibold text-lg md:text-xl lg:text-2xl absolute top-[35px] left-1/2 -translate-x-1/2`}
+        style={{ fontFamily: fonts.font2 }}
       >
         {eventCreator}
       </h2>
       <h1
-        className={`text-white uppercase font-lazord absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
+        className={`text-white uppercase absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
+        style={{ fontFamily: fonts.font1 }}
       >
         {eventName}
       </h1>
       <p
-        className={`text-white font-poppins font-semibold absolute bottom-[35px] text-lg md:text-xl lg:text-2xl left-1/2 -translate-x-1/2`}
+        className={`text-white font-semibold absolute bottom-[35px] text-lg md:text-xl lg:text-2xl left-1/2 -translate-x-1/2`}
+        style={{ fontFamily: fonts.font2 }}
       >
         {eventDate}
       </p>

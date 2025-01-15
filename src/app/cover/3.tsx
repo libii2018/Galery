@@ -27,13 +27,21 @@ export default function Cover({
         backgroundPosition: "center",
       }}
     >
-      <h2 className={`text-white font-drugs text-3xl`}>{eventCreator}</h2>
+      <h2 className={`text-white text-3xl`} style={{ fontFamily: fonts.font2 }}>
+        {eventCreator}
+      </h2>
       <h1
-        className={`text-white uppercase font-tan-mon-cheri text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] lg:leading-[180px] text-center`}
+        className={`text-white uppercase text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] lg:leading-[180px] text-center`}
+        style={{ fontFamily: fonts.font1 }}
       >
         {eventName}
       </h1>
-      <p className={`text-white font-font-drugs text-3xl`}>{eventDate}</p>
+      <p
+        className={`text-white font-text-3xl`}
+        style={{ fontFamily: fonts.font1 }}
+      >
+        {eventDate}
+      </p>
     </section>
   );
 }

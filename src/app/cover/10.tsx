@@ -21,19 +21,46 @@ export default function Cover({
   return (
     <section
       className={`flex flex-col relative justify-between h-[100vh] p-8 bg-[${eventBackgroundColor}]`}
+      style={{
+        backgroundColor: eventBackgroundColor,
+      }}
     >
       <h1
-        className={`absolute font-dream uppercase text-[50px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
+        className={`absolute uppercase text-[50px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
+        style={{ fontFamily: fonts.font1 }}
       >
         {eventName}
       </h1>
       <div className="grid grid-cols-2 absolute left-8 md:top-[46%] top-[45%] md:size-[50px] lg:size-[80px] bg-[#ca8770]">
-        <div className={`bg-[${eventBackgroundColor}] rounded-br-[100%]`}></div>
-        <div className={`bg-[${eventBackgroundColor}] rounded-bl-[100%]`}></div>
-        <div className={`bg-[${eventBackgroundColor}] rounded-tr-[100%]`}></div>
-        <div className={`bg-[${eventBackgroundColor}] rounded-tl-[100%]`}></div>
+        <div
+          className={`rounded-br-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
+        <div
+          className={`rounded-bl-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
+        <div
+          className={`rounded-tr-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
+        <div
+          className={`rounded-tl-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
       </div>
-      <h2 className={`text-sm font-open-sans uppercase text-white`}>
+      <h2
+        className={`text-sm uppercase text-white`}
+        style={{ fontFamily: fonts.font2 }}
+      >
         {eventCreator}
       </h2>
       <div className="flex flex-col items-center justify-center">
@@ -48,14 +75,37 @@ export default function Cover({
           ></div>
         </div>
       </div>
-      <h2 className={`text-sm font-open-sans uppercase text-white text-right`}>
+      <h2
+        className={`text-sm uppercase text-white text-right`}
+        style={{ fontFamily: fonts.font2 }}
+      >
         {eventDate}
       </h2>
       <div className="grid grid-cols-2 absolute right-8 md:top-[46%] top-[45%] md:size-[50px] lg:size-[80px] bg-[#ca8770]">
-        <div className={`bg-[${eventBackgroundColor}] rounded-br-[100%]`}></div>
-        <div className={`bg-[${eventBackgroundColor}] rounded-bl-[100%]`}></div>
-        <div className={`bg-[${eventBackgroundColor}] rounded-tr-[100%]`}></div>
-        <div className={`bg-[${eventBackgroundColor}] rounded-tl-[100%]`}></div>
+        <div
+          className={`rounded-br-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
+        <div
+          className={`rounded-bl-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
+        <div
+          className={`rounded-tr-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
+        <div
+          className={`rounded-tl-[100%]`}
+          style={{
+            backgroundColor: eventBackgroundColor,
+          }}
+        ></div>
       </div>
     </section>
   );

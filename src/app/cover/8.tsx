@@ -20,7 +20,10 @@ export default function Cover({
 }: Props) {
   return (
     <section
-      className={`flex flex-col items-center p-12 md:p-14 lg:p-20 h-[100vh] bg-[${eventBackgroundColor}]`}
+      className={`flex flex-col items-center p-12 md:p-14 lg:p-20 h-[100vh]`}
+      style={{
+        backgroundColor: eventBackgroundColor,
+      }}
     >
       <div
         className="flex flex-col items-center justify-center w-full h-full"
@@ -32,17 +35,20 @@ export default function Cover({
       >
         <div className="flex flex-col items-center justify-center w-full h-full p-10">
           <h1
-            className={`text-[#fff500] uppercase font-perandory my-auto text-[60px] md:text-[110px] lg:text-[130px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
+            className={`text-[#fff500] uppercase my-auto text-[60px] md:text-[110px] lg:text-[130px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
+            style={{ fontFamily: fonts.font1 }}
           >
             {eventName}
           </h1>
           <h2
-            className={`text-[#fff500] uppercase font-helvetica text-xl md:text-2xl`}
+            className={`text-[#fff500] uppercase text-xl md:text-2xl`}
+            style={{ fontFamily: fonts.font2 }}
           >
             {eventCreator}
           </h2>
           <p
-            className={`text-[#fff500] uppercase font-helvetica text-2xl lg:right-[40px]`}
+            className={`text-[#fff500] uppercase text-2xl lg:right-[40px]`}
+            style={{ fontFamily: fonts.font2 }}
           >
             {eventDate}
           </p>

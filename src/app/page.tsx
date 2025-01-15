@@ -27,7 +27,7 @@ export default function Home() {
         eventBackgroundColor="#383020"
         fonts={{
           font1: "dream",
-          font2: "open-sans",
+          font2: "Open Sans",
         }}
       />
       <Cover2
@@ -43,7 +43,7 @@ export default function Home() {
         eventBackgroundColor="#253439"
         fonts={{
           font1: "dream",
-          font2: "open-sans",
+          font2: "Open Sans",
         }}
       />
       <Cover3
@@ -75,7 +75,7 @@ export default function Home() {
         eventBackgroundColor="#253439"
         fonts={{
           font1: "lazord",
-          font2: "poppins",
+          font2: "Poppins",
         }}
       />
       <Cover5
@@ -90,8 +90,8 @@ export default function Home() {
         eventCreator="Photographer name"
         eventBackgroundColor="#253439"
         fonts={{
-          font1: "cinzel",
-          font2: "poppins",
+          font1: "Cinzel",
+          font2: "Poppins",
         }}
       />
       <Cover6
@@ -155,7 +155,7 @@ export default function Home() {
         eventBackgroundColor="#ff9551"
         fonts={{
           font1: "lazord",
-          font2: "poppins",
+          font2: "Poppins",
         }}
       />
       <Cover10
@@ -171,7 +171,7 @@ export default function Home() {
         eventBackgroundColor="#383020"
         fonts={{
           font1: "dream",
-          font2: "open-sans",
+          font2: "Open Sans",
         }}
       />
       <Cover11
@@ -186,8 +186,8 @@ export default function Home() {
         eventCreator="photographer"
         eventBackgroundColor="#383020"
         fonts={{
-          font1: "poppins",
-          font2: "poppins",
+          font1: "Poppins",
+          font2: "Poppins",
         }}
       />
     </>

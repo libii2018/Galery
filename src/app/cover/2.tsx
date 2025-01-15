@@ -20,7 +20,10 @@ export default function Cover({
 }: Props) {
   return (
     <section
-      className={`flex flex-col items-center justify-between md:h-[100vh] lg:h-[100vh] p-8 bg-[${eventBackgroundColor}] gap-20 overflow-hidden`}
+      className={`flex flex-col items-center justify-between md:h-[100vh] lg:h-[100vh] p-8 gap-20 overflow-hidden`}
+      style={{
+        backgroundColor: eventBackgroundColor,
+      }}
     >
       <div className="flex flex-col gap-12 md:gap-0 md:flex-row lg:flex-row items-center justify-between relative w-full max-w-[1200px]">
         <div className="flex flex-col w-full justify-center items-center md:items-start lg:items-start md:w-[50%] lg:w-[50%]">
@@ -56,14 +59,21 @@ export default function Cover({
         <div className="flex flex-col w-full md:w-[40%] lg:w-[40%] gap-16">
           <h1
             className={`text-[#ff9551] font-dream text-[70px] lg:text-[80px] lg:leading-[120px] w-[70%] md:w-full uppercase`}
+            style={{ fontFamily: fonts.font1 }}
           >
             {eventName}
           </h1>
-          <div className="flex flex-row items-center justify-between">
-            <p className={`text-xs font-open-sans text-white`}>
-              {eventCreator}
+          <div
+            className="flex flex-row items-center justify-between"
+            style={{ fontFamily: fonts.font2 }}
+          >
+            <p className={`text-xs text-white`}>{eventCreator}</p>
+            <p
+              className={`text-xs text-white`}
+              style={{ fontFamily: fonts.font2 }}
+            >
+              {eventDate}
             </p>
-            <p className={`text-xs font-open-sans text-white`}>{eventDate}</p>
           </div>
         </div>
       </div>

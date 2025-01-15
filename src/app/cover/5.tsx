@@ -27,18 +27,23 @@ export default function Cover({
         backgroundPosition: "center",
       }}
     >
-      <h2 className={`text-white font-poppins font-medium text-xl`}>
+      <h2
+        className={`text-white font-medium text-xl`}
+        style={{ fontFamily: fonts.font2 }}
+      >
         {eventCreator}
       </h2>
       <h1
-        className={`text-white font-cinzel font-medium uppercase text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
+        className={`text-white font-medium uppercase text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
+        style={{ fontFamily: fonts.font1 }}
       >
         {eventName}
       </h1>
       <div className="w-full relative">
         <div className="absolute left-[-20px] w-[70%] md:w-[80%] lg:w-[90%] h-[2px] bg-white opacity-65"></div>
         <p
-          className={`absolute font-poppins font-medium text-white bottom-[-10px] text-lg right-[20px] md:right-[30px] lg:right-[40px]`}
+          className={`absolute font-medium text-white bottom-[-10px] text-lg right-[20px] md:right-[30px] lg:right-[40px]`}
+          style={{ fontFamily: fonts.font2 }}
         >
           {eventDate}
         </p>
