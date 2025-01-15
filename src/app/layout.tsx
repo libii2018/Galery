@@ -1,11 +1,4 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Open_Sans,
-  Poppins,
-  Cinzel,
-} from "next/font/google";
 import localfont from "next/font/local";
 import "./globals.css";
 
