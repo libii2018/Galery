@@ -26,7 +26,7 @@ export default function Cover({
       }}
     >
       <h1
-        className={`absolute uppercase text-[50px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
+        className={`absolute uppercase text-[70px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
         style={{ fontFamily: fonts.font1 }}
       >
         {eventName}
@@ -58,13 +58,18 @@ export default function Cover({
         ></div>
       </div>
       <h2
-        className={`text-sm uppercase text-white`}
+        className={`text-sm uppercase ${
+          eventBackgroundColor === "#fff" ||
+          eventBackgroundColor === "#ffffff  "
+            ? "text-black"
+            : "text-white"
+        }`}
         style={{ fontFamily: fonts.font2 }}
       >
         {eventCreator}
       </h2>
       <div className="flex flex-col items-center justify-center">
-        <div className="w-[300px] h-[190px] md:w-[450px]  md:h-[350px] lg:w-[664px] lg:h-[464px] relative rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[50%] rounded-br-[50%] border-[1px] border-[#ff9551]">
+        <div className="w-[400px] h-[600px] md:w-[450px]  md:h-[350px] lg:w-[664px] lg:h-[464px] relative rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[50%] rounded-br-[50%] border-[1px] border-[#ff9551]">
           <div
             className="absolute inset-4 rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[50%] rounded-br-[50%]"
             style={{
@@ -76,7 +81,12 @@ export default function Cover({
         </div>
       </div>
       <h2
-        className={`text-sm uppercase text-white text-right`}
+        className={`text-sm uppercase ${
+          eventBackgroundColor === "#fff" ||
+          eventBackgroundColor === "#ffffff  "
+            ? "text-black"
+            : "text-white"
+        } text-right`}
         style={{ fontFamily: fonts.font2 }}
       >
         {eventDate}

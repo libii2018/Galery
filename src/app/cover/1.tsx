@@ -57,12 +57,20 @@ export default function Cover({
           }}
         ></div>
       </div>
-      <h2 className={`text-sm text-white`} style={{ fontFamily: fonts.font2 }}>
+      <h2
+        className={`text-sm ${
+          eventBackgroundColor === "#fff" ||
+          eventBackgroundColor === "#ffffff  "
+            ? "text-black"
+            : "text-white"
+        }`}
+        style={{ fontFamily: fonts.font2 }}
+      >
         {eventCreator}
       </h2>
       <div className="flex flex-col items-center justify-center">
         <div
-          className="w-[300px] h-[300px] md:w-[450px] md:h-[450px] lg:w-[564px] lg:h-[564px] relative bg-black rounded-tl-[50%] rounded-tr-[50%]"
+          className="w-[400px] h-[600px] md:w-[450px] md:h-[450px] lg:w-[564px] lg:h-[564px] relative bg-black rounded-tl-[200px] rounded-tr-[200px] md:rounded-tl-[50%] md:rounded-tr-[50%]"
           style={{
             backgroundImage: `url(${cover.url})`,
             backgroundSize: "cover",
@@ -71,7 +79,12 @@ export default function Cover({
         ></div>
       </div>
       <h2
-        className={`text-sm text-white text-right`}
+        className={`text-sm ${
+          eventBackgroundColor === "#fff" ||
+          eventBackgroundColor === "#ffffff  "
+            ? "text-black"
+            : "text-white"
+        } text-right`}
         style={{ fontFamily: fonts.font2 }}
       >
         {eventDate}

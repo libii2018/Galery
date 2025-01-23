@@ -27,8 +27,8 @@ export default function Cover({
         backgroundPosition: "center",
       }}
     >
-      <div className="absolute top-[50px] left-0 w-[35%] h-[2px] bg-white"></div>
-      <div className="absolute top-[50px] right-0 w-[35%] h-[2px] bg-white"></div>
+      <div className="absolute top-[50px] left-0 w-[25%] md:w-[35%] h-[2px] bg-white"></div>
+      <div className="absolute top-[50px] right-0 w-[25%] md:w-[35%] h-[2px] bg-white"></div>
       <div className="absolute left-[50px] top-0 bottom-0 w-[2px] bg-white"></div>
       <div className="absolute left-[46px] gap-[1px] top-[46px]  size-[10px] bg-white transform rotate-45"></div>
       <div className="absolute right-[46px] gap-[1px] top-[46px]  size-[10px] bg-white transform rotate-45"></div>
@@ -53,8 +53,8 @@ export default function Cover({
       <div className="absolute left-[46px] gap-[1px] bottom-[46px]  size-[10px] bg-white transform rotate-45"></div>
       <div className="absolute right-[46px] gap-[1px] bottom-[46px]  size-[10px] bg-white transform rotate-45"></div>
       <div className="absolute right-[50px] top-0 bottom-0 w-[2px] bg-white"></div>
-      <div className="absolute bottom-[50px] left-0 w-[35%] h-[2px] bg-white"></div>
-      <div className="absolute bottom-[50px] right-0 w-[35%] h-[2px] bg-white"></div>
+      <div className="absolute bottom-[50px] left-0 w-[25%] md:w-[35%] h-[2px] bg-white"></div>
+      <div className="absolute bottom-[50px] right-0 w-[25%] md:w-[35%] h-[2px] bg-white"></div>
     </section>
   );
 }
