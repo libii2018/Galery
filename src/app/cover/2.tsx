@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { CoverImage, FontPolice } from "../types";
+import { motion } from "motion/react";
 
 interface Props {
   cover: CoverImage;
@@ -57,33 +59,46 @@ export default function Cover({
           </div>
         </div>
         <div className="flex flex-col w-full md:w-[40%] lg:w-[40%] justify-between md:gap-16">
-          <h1
+          <motion.h1
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             className={`text-[#ff9551] font-dream text-5xl md:text-[70px] lg:text-[80px] lg:leading-[120px]  md:w-full uppercase`}
             style={{ fontFamily: fonts.font1 }}
           >
             {eventName}
-          </h1>
+          </motion.h1>
           <div
             className="flex flex-row items-center justify-between mt-4"
             style={{ fontFamily: fonts.font2 }}
           >
-            <p className={`text-xs ${
-          eventBackgroundColor === "#fff" ||
-          eventBackgroundColor === "#ffffff  "
-            ? "text-black"
-            : "text-white"
-        }`}>{eventCreator}</p>
-            <p
+            <motion.p
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
               className={`text-xs ${
-          eventBackgroundColor === "#fff" ||
-          eventBackgroundColor === "#ffffff  "
-            ? "text-black"
-            : "text-white"
-        }`}
+                eventBackgroundColor === "#fff" ||
+                eventBackgroundColor === "#ffffff  "
+                  ? "text-black"
+                  : "text-white"
+              }`}
+            >
+              {eventCreator}
+            </motion.p>
+            <motion.p
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 2, ease: "easeInOut" }}
+              className={`text-xs ${
+                eventBackgroundColor === "#fff" ||
+                eventBackgroundColor === "#ffffff  "
+                  ? "text-black"
+                  : "text-white"
+              }`}
               style={{ fontFamily: fonts.font2 }}
             >
               {eventDate}
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>

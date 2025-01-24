@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { CoverImage, FontPolice } from "../types";
+import { motion } from "motion/react";
 
 interface Props {
   cover: CoverImage;
@@ -27,21 +29,33 @@ export default function Cover({
         backgroundPosition: "center",
       }}
     >
-      <h2 className={`text-white text-3xl`} style={{ fontFamily: fonts.font2 }}>
+      <motion.h2
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+        className={`text-white text-3xl`}
+        style={{ fontFamily: fonts.font2 }}
+      >
         {eventCreator}
-      </h2>
-      <h1
+      </motion.h2>
+      <motion.h1
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         className={`text-white uppercase text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] lg:leading-[180px] text-center`}
         style={{ fontFamily: fonts.font1 }}
       >
         {eventName}
-      </h1>
-      <p
+      </motion.h1>
+      <motion.p
+        initial={{ y: 25, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 2, ease: "easeInOut" }}
         className={`text-white font-text-3xl`}
         style={{ fontFamily: fonts.font1 }}
       >
         {eventDate}
-      </p>
+      </motion.p>
     </section>
   );
 }

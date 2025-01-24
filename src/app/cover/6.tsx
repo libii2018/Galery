@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { CoverImage, FontPolice } from "../types";
+import { motion } from "motion/react";
 
 interface Props {
   cover: CoverImage;
@@ -26,7 +28,10 @@ export default function Cover({
       }}
     >
       <div className="flex flex-col items-start py-20 px-10 justify-between w-full md:w-[40%] h-full">
-        <h2
+        <motion.h2
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className={`${
             eventBackgroundColor === "#fff" ||
             eventBackgroundColor === "#ffffff  "
@@ -36,8 +41,11 @@ export default function Cover({
           style={{ fontFamily: fonts.font2 }}
         >
           {eventCreator}
-        </h2>
-        <h1
+        </motion.h2>
+        <motion.h1
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 2 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           className={`${
             eventBackgroundColor === "#fff" ||
             eventBackgroundColor === "#ffffff  "
@@ -47,7 +55,7 @@ export default function Cover({
           style={{ fontFamily: fonts.font1 }}
         >
           {eventName}
-        </h1>
+        </motion.h1>
         <div className="w-full flex flex-row items-center justify-start gap-2">
           <div
             className="w-[20px] h-[20px] bg-[#6b6361]"
@@ -55,7 +63,10 @@ export default function Cover({
               clipPath: "polygon(30% 20%, 70% 50%, 30% 80%)", // Triangle shape
             }}
           ></div>
-          <p
+          <motion.p
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 2 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
             className={`${
               eventBackgroundColor === "#fff" ||
               eventBackgroundColor === "#ffffff  "
@@ -65,7 +76,7 @@ export default function Cover({
             style={{ fontFamily: fonts.font2 }}
           >
             {eventDate}
-          </p>
+          </motion.p>
         </div>
       </div>
       <div className="w-full flex flex-col items-center justify-center md:w-[55%] h-full">
