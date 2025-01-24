@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 import { CoverImage, FontPolice } from "../types";
-import { motion } from "motion/react";
 
 interface Props {
   cover: CoverImage;
@@ -20,8 +20,13 @@ export default function Cover({
   eventBackgroundColor,
   fonts,
 }: Props) {
+  // Créez une référence pour l'élément à observer
+  const ref = useRef(null);
+  // Utilisez useInView pour détecter quand l'élément est visible
+  const isInView = useInView(ref, { amount: 0.5 }); // 30% de visibilité
   return (
     <section
+      ref={ref}
       className={`flex flex-col relative justify-between h-[100vh] p-8 bg-[${eventBackgroundColor}]`}
       style={{
         backgroundColor: eventBackgroundColor,
@@ -29,8 +34,8 @@ export default function Cover({
     >
       <motion.h1
         initial={{ y: "-20%", opacity: 0 }}
-        animate={{ y: "-50%", opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        animate={isInView ? { y: "-50%", opacity: 1 } : {}}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`absolute uppercase text-[70px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
         style={{
           fontFamily: fonts.font1,
@@ -69,8 +74,8 @@ export default function Cover({
       </div>
       <motion.h2
         initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         className={`text-sm uppercase ${
           eventBackgroundColor === "#fff" ||
           eventBackgroundColor === "#ffffff  "
@@ -95,8 +100,8 @@ export default function Cover({
       </div>
       <motion.h2
         initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
         className={`text-sm uppercase ${
           eventBackgroundColor === "#fff" ||
           eventBackgroundColor === "#ffffff  "

@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 import { CoverImage, FontPolice } from "../types";
-import { motion } from "motion/react";
 
 interface Props {
   cover: CoverImage;
@@ -20,8 +20,13 @@ export default function Cover({
   eventBackgroundColor,
   fonts,
 }: Props) {
+  // Créez une référence pour l'élément à observer
+  const ref = useRef(null);
+  // Utilisez useInView pour détecter quand l'élément est visible
+  const isInView = useInView(ref, { amount: 0.5 }); // 30% de visibilité
   return (
     <section
+      ref={ref}
       className={`flex flex-col items-center justify-between h-[100vh] p-8 gap-20 overflow-hidden`}
       style={{
         backgroundColor: eventBackgroundColor,
@@ -61,8 +66,8 @@ export default function Cover({
         <div className="flex flex-col w-full md:w-[40%] lg:w-[40%] justify-between md:gap-16">
           <motion.h1
             initial={{ y: 25, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            animate={isInView ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className={`text-[#ff9551] font-dream text-5xl md:text-[70px] lg:text-[80px] lg:leading-[120px]  md:w-full uppercase`}
             style={{ fontFamily: fonts.font1 }}
           >
@@ -74,8 +79,8 @@ export default function Cover({
           >
             <motion.p
               initial={{ y: 25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 2, ease: "easeInOut" }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               className={`text-xs ${
                 eventBackgroundColor === "#fff" ||
                 eventBackgroundColor === "#ffffff  "
@@ -87,8 +92,8 @@ export default function Cover({
             </motion.p>
             <motion.p
               initial={{ y: 25, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 2, ease: "easeInOut" }}
+              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               className={`text-xs ${
                 eventBackgroundColor === "#fff" ||
                 eventBackgroundColor === "#ffffff  "
