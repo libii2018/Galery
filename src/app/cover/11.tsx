@@ -33,15 +33,18 @@ export default function Cover({
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="flex flex-col items-center justify-center w-full h-full gap-2">
           <motion.h1
-          initial={{ y: 25, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2, ease: "easeInOut" }}
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             className={`text-white uppercase font-poppins font-semibold text-[60px] md:text-[110px] lg:text-[135px] text-center w-full leading-[80px] md:leading-[100px] lg:leading-[120px] md:text-center`}
             style={{ fontFamily: fonts.font1 }}
           >
             {eventName}
           </motion.h1>
           <motion.h2
+            initial={{ y: 25, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
             className={`text-white uppercase font-poppins font-medium md:text-5xl`}
             style={{ fontFamily: fonts.font2 }}
           >
@@ -49,14 +52,14 @@ export default function Cover({
           </motion.h2>
         </div>
         <motion.p
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+          initial={{ y: 25, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className={`text-white uppercase font-poppins text-2xl lg:right-[40px] font-semibold`}
           style={{ fontFamily: fonts.font2 }}
         >
           {eventDate}
-        </p>
+        </motion.p>
       </div>
     </section>
   );

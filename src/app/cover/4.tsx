@@ -44,11 +44,16 @@ export default function Cover({
         {eventCreator}
       </motion.h2>
       <motion.h1
-        initial={{ y: 25, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: "-20%", opacity: 0 }}
+        animate={{ y: "-50%", opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
         className={`text-white uppercase absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
-        style={{ fontFamily: fonts.font1 }}
+        style={{
+          fontFamily: fonts.font1,
+          left: "50%",
+          right: "50%",
+          translateX: "-50%",
+        }}
       >
         {eventName}
       </motion.h1>
