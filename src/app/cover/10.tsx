@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { useRef } from "react";
 import { CoverImage, FontPolice } from "../types";
 
@@ -22,8 +22,6 @@ export default function Cover({
 }: Props) {
   // Créez une référence pour l'élément à observer
   const ref = useRef(null);
-  // Utilisez useInView pour détecter quand l'élément est visible
-  const isInView = useInView(ref, { amount: 0.5 }); // 30% de visibilité
   return (
     <section
       ref={ref}
@@ -34,7 +32,8 @@ export default function Cover({
     >
       <motion.h1
         initial={{ y: "-20%", opacity: 0 }}
-        animate={isInView ? { y: "-50%", opacity: 1 } : {}}
+        whileInView={{ y: "-50%", opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`absolute uppercase text-[70px] md:text-[90px] w-full m-0 p-0 text-center lg:text-[120px] top-1/2 left-1/2 text-white z-30 -translate-x-1/2 -translate-y-1/2`}
         style={{
@@ -74,7 +73,8 @@ export default function Cover({
       </div>
       <motion.h2
         initial={{ y: 25, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className={`text-sm uppercase ${
           eventBackgroundColor === "#fff" ||
@@ -86,8 +86,8 @@ export default function Cover({
       >
         {eventCreator}
       </motion.h2>
-      <div className="flex flex-col items-center justify-center">
-        <div className="w-[400px] h-[600px] md:w-[450px]  md:h-[350px] lg:w-[664px] lg:h-[464px] relative rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[50%] rounded-br-[50%] border-[1px] border-[#ff9551]">
+      <div className="flex flex-col items-center justify-center mt-8">
+        <div className="w-[400px] h-[550px] md:w-[450px]  md:h-[350px] lg:w-[664px] lg:h-[464px] relative rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[50%] rounded-br-[50%] border-[1px] border-[#ff9551]">
           <div
             className="absolute inset-4 rounded-tl-[50%] rounded-tr-[50%] rounded-bl-[50%] rounded-br-[50%]"
             style={{
@@ -98,9 +98,21 @@ export default function Cover({
           ></div>
         </div>
       </div>
+      <motion.a
+        initial={{ y: 15, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.1, ease: "easeInOut" }}
+        href="#gallery"
+        className="mx-auto mt-5 text-white text-sm w-fit py-3 px-8 transition duration-300 ease-in-out transform border border-white uppercase"
+      >
+        View Gallery
+      </motion.a>
       <motion.h2
         initial={{ y: 25, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : {}}
+        whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className={`text-sm uppercase ${
           eventBackgroundColor === "#fff" ||
@@ -112,6 +124,7 @@ export default function Cover({
       >
         {eventDate}
       </motion.h2>
+
       <div className="grid grid-cols-2 absolute right-8 md:top-[46%] top-[45%] md:size-[50px] lg:size-[80px] bg-[#ca8770]">
         <div
           className={`rounded-br-[100%]`}

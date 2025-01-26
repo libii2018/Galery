@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { useRef } from "react";
 import { CoverImage, FontPolice } from "../types";
 
@@ -23,7 +23,6 @@ export default function Cover({
   // Créez une référence pour l'élément à observer
   const ref = useRef(null);
   // Utilisez useInView pour détecter quand l'élément est visible
-  const isInView = useInView(ref, { amount: 0.5 }); // 30% de visibilité
   return (
     <section
       ref={ref}
@@ -41,7 +40,8 @@ export default function Cover({
       <div className="absolute right-[46px] gap-[1px] top-[46px]  size-[10px] bg-white transform rotate-45"></div>
       <motion.h2
         initial={{ y: "-20%", opacity: 0 }}
-        animate={isInView ? { y: "-50%", opacity: 1 } : {}}
+        whileInView={{ y: "-50%", opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className={`text-white font-semibold text-lg md:text-xl lg:text-2xl absolute top-[35px] left-1/2 -translate-x-1/2`}
         style={{
@@ -55,7 +55,8 @@ export default function Cover({
       </motion.h2>
       <motion.h1
         initial={{ y: "-20%", opacity: 0 }}
-        animate={isInView ? { y: "-50%", opacity: 1 } : {}}
+        whileInView={{ y: "-50%", opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className={`text-white uppercase absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 text-[60px] md:text-[90px] lg:text-[140px] w-[60%] leading-[80px] md:leading-[120px] text-center`}
         style={{
@@ -67,9 +68,21 @@ export default function Cover({
       >
         {eventName}
       </motion.h1>
+      <motion.a
+        initial={{ y: 15, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.05 }}
+        transition={{ duration: 0.1, ease: "easeInOut" }}
+        href="#gallery"
+        className="mx-auto mt-[114%] md:mt-[41%]  text-white text-sm w-fit py-3 px-8 transition duration-300 ease-in-out transform border border-white uppercase"
+      >
+        View Gallery
+      </motion.a>
       <motion.p
         initial={{ y: "-20%", opacity: 0 }}
-        animate={isInView ? { y: "-50%", opacity: 1 } : {}}
+        whileInView={{ y: "-50%", opacity: 1 }} // Déclenchez l'animation si visible
+        viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
         className={`text-white font-semibold absolute bottom-[35px] text-lg md:text-xl lg:text-2xl left-1/2 -translate-x-1/2`}
         style={{

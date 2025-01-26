@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { useRef } from "react";
 import { CoverImage, FontPolice } from "../types";
 
@@ -23,16 +23,15 @@ export default function Cover({
   // Créez une référence pour l'élément à observer
   const ref = useRef(null);
   // Utilisez useInView pour détecter quand l'élément est visible
-  const isInView = useInView(ref, { amount: 0.5 }); // 30% de visibilité
   return (
     <section
       ref={ref}
-      className={`flex flex-col items-center justify-between h-[100vh] p-8 gap-20 overflow-hidden`}
+      className={`flex flex-col items-center justify-between h-[100vh]  p-3 md:p-8 gap-20 overflow-hidden`}
       style={{
         backgroundColor: eventBackgroundColor,
       }}
     >
-      <div className="flex flex-col gap-12 md:gap-0 md:flex-row lg:flex-row items-center justify-between relative w-full max-w-[1200px]">
+      <div className="flex flex-col gap-4 md:gap-0 md:flex-row lg:flex-row items-center justify-between relative w-full max-w-[1200px]">
         <div className="flex flex-col w-full justify-center items-center md:items-start lg:items-start md:w-[50%] lg:w-[50%]">
           <div className="w-[400px] h-[550px] lg:w-[500px] lg:h-[650px] relative flex flex-col z-40  rounded-tl-[300px] rounded-tr-[300px] border-[1px] border-[#ff9551]">
             <div className="absolute -left-[5.1%] lg:-left-[5.2%] gap-[1px] top-[80%] lg:top-[80%] size-[40px] lg:size-[50px] bg-transparent">
@@ -66,9 +65,10 @@ export default function Cover({
         <div className="flex flex-col w-full md:w-[40%] lg:w-[40%] justify-between md:gap-16">
           <motion.h1
             initial={{ y: 25, opacity: 0 }}
-            animate={isInView ? { y: 0, opacity: 1 } : {}}
+            whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+            viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className={`text-[#ff9551] font-dream text-5xl md:text-[70px] lg:text-[80px] lg:leading-[120px]  md:w-full uppercase`}
+            className={`text-[#ff9551] text-center md:text-left font-dream text-5xl md:text-[70px] lg:text-[80px] lg:leading-[120px]  md:w-full uppercase`}
             style={{ fontFamily: fonts.font1 }}
           >
             {eventName}
@@ -79,7 +79,8 @@ export default function Cover({
           >
             <motion.p
               initial={{ y: 25, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className={`text-xs ${
                 eventBackgroundColor === "#fff" ||
@@ -92,7 +93,8 @@ export default function Cover({
             </motion.p>
             <motion.p
               initial={{ y: 25, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className={`text-xs ${
                 eventBackgroundColor === "#fff" ||
@@ -105,6 +107,34 @@ export default function Cover({
               {eventDate}
             </motion.p>
           </div>
+          <motion.a
+            initial={{ y: 15, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }} // Déclenchez l'animation si visible
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.1, ease: "easeInOut" }}
+            href="#gallery"
+            className="
+        mt-3  
+        md:mt-0
+        mx-auto
+        md:m-0
+        text-white 
+        text-sm
+        w-fit
+        py-3 
+        px-8 
+        transition 
+        duration-300 
+        ease-in-out 
+        transform 
+        hover:opacity-100 
+         border 
+        border-white 
+        uppercase"
+          >
+            View Gallery
+          </motion.a>
         </div>
       </div>
     </section>
